@@ -2,7 +2,7 @@
 ### Compile openCV with GPU support to speed up operations
 
 
-This guide will walk you through the process of installing OpenCV-Python from the source. Before beginning, make sure to remove any existing OpenCV-Python directories and load the necessary modules by running the following commands:
+This guide will walk you through the process of installing OpenCV-Python from the source. Before beginning, make sure to remove any existing OpenCV-Python directories and load the necessary modules:
 
 Step 0:
     Have cuda and cudnn installed properly on your environment: 
