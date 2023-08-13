@@ -1,8 +1,6 @@
-# Medium-OpenCV_GPU
-Compile openCV with GPU support to speed up operations
+# Installing OpenCV-Python from Source
+### Compile openCV with GPU support to speed up operations
 
-
-Installing OpenCV-Python from Source
 
 This guide will walk you through the process of installing OpenCV-Python from the source. Before beginning, make sure to remove any existing OpenCV-Python directories and load the necessary modules by running the following commands:
 
