@@ -24,12 +24,13 @@ Step 3:
     git checkout $STABLE_VERSION
     git checkout f9de34ec8bc8bc5d61e5e35c0721676993da7d71
 
-Now it's time to set up your build environment by exporting the necessary CMake arguments:
+Now it's time to set up your build environment by exporting the necessary CMake arguments, where "path/to/*" is your path to the * directory that is required:
 
 Step 4:
 
-    export CMAKE_ARGS="-DOPENCV_EXTRA_MODULES_PATH=/home/prsood/projects/def-whkchun/prsood/opencv-python/opencv_contrib/modules -DWITH_LAPACK=OFF -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_EXAMPLES=OFF -DWITH_OPENEXR=OFF -DWITH_CUDA=ON -DWITH_CUBLAS=ON -DWITH_CUDNN=ON -DOPENCV_DNN_CUDA=ON -DCUDA_GENERATION=Volta -DENABLE_PRECOMPILED_HEADERS=OFF /home/prsood/projects/def-whkchun/prsood/opencv-python"
+    export CMAKE_ARGS="-DOPENCV_EXTRA_MODULES_PATH= $path/to/opencv-python/opencv_contrib/modules$ -DWITH_LAPACK=OFF -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_EXAMPLES=OFF -DWITH_OPENEXR=OFF -DWITH_CUDA=ON -DWITH_CUBLAS=ON -DWITH_CUDNN=ON -DOPENCV_DNN_CUDA=ON -DCUDA_GENERATION=Volta -DENABLE_PRECOMPILED_HEADERS=OFF $path/to/opencv-python$"
 
+Before we proceed, I would like to mention that there are many more flags that you can enable or disable, but this was the easiest way for me to get GPU support for the tasks at hand.
 Let's go through each of these arguments one by one to understand what they do:
 
 - `-DOPENCV_EXTRA_MODULES_PATH`: This option specifies a semicolon-separated list of directories containing extra modules that will be added to the build.
@@ -62,7 +63,7 @@ Step 6:
     pip wheel . --verbose
 
 
-Once the build process is complete, you should have a new wheel file in your current directory. Simply install this wheel using `pip install` and you're done!
+Once the build process is complete, you should have a new wheel file in your current directory. Simply install this wheel using `pip install`, and you're done!
 
 Step 7:
 
@@ -72,4 +73,4 @@ Step 7:
 mine was opencv_contrib_python-4.7.0.72-cp37-cp37m-linux_x86_64.whl
 
 
-Thank you for reading my first article on Medium!
+Thank you for reading my first article on Medium! Enjoy your fast operations!
